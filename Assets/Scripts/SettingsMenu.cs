@@ -7,7 +7,8 @@ using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
-    public Slider MasterSlider;
+    [SerializeField] private AudioSource audioSource;
+    [SerializeField] private AudioClip collectSfx;
     
 
     void Start ()
@@ -16,8 +17,8 @@ public class SettingsMenu : MonoBehaviour
     }
     public void SetVolumeMaster (float volume)
     {
-        audioMixer.SetFloat("masterVolume", volume);
-        audioMixer.SetFloat("musicVolume", volume);
+        audioMixer.SetFloat("effectsVolume", volume);
+        audioSource.PlayOneShot(collectSfx);
     }
 
     public void SetVolumeMusic (float volume)

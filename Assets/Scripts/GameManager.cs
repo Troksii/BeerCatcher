@@ -89,14 +89,6 @@ public class GameManager : MonoBehaviour
     }
     }
 
-    /*private void StartSpawning()
-    {
-        InvokeRepeating("SpawnKoskenkorva", 2f, KoskenkorvaSpawnRate);
-        InvokeRepeating("SpawnLager", 0.5f, LagerSpawnRate);
-        InvokeRepeating("SpawnLongDrink", 5f, LongDrinkSpawnRate);
-        InvokeRepeating("SpawnJoint", 15f, JointSpawnRate);
-    }*/
-
     private void SpawnKoskenkorva()
     {
         Vector3 spawnPos = spawnPoint.position;

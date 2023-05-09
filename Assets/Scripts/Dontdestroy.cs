@@ -7,7 +7,16 @@ public class Dontdestroy : MonoBehaviour
     // Start is called before the first frame update
   private void Awake() {
     {
-        DontDestroyOnLoad(transform.gameObject);
+      GameObject[] musicObj = GameObject.FindGameObjectsWithTag("BGMusic");
+      if (musicObj.Length > 1)
+      {
+          Destroy(this.gameObject);
+      }
+      else
+      {
+         DontDestroyOnLoad(this.gameObject);
+      }
+       
     }
   }
 }
